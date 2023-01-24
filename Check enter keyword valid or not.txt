@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+#include<string.h>
+int main()
+{
+	char keyword[32][10]={"auto","double","int","break","else","long","switch","case","enum","resgister",
+			"typedef","char","extern","return","union","const","float","short","unsigned","continue",
+			"for","signed","void","default","goto","sizeof","volatile","do","if","static","while"};
+	char str[10];
+	int c=0;
+	printf("enter the string");
+	scanf("%s",&str);
+	for(int i=0;i<32;i++)
+	{
+		if(strcmp(str,keyword[i])==0)
+		{
+			c=1;
+		}
+	}
+	if(c==1)
+	printf("%s is the keyword",str);
+	else
+	printf("%s is not keyword",str);
+}
